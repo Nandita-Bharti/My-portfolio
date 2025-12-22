@@ -1,58 +1,47 @@
 // 1. Typing Animation
-const typed = new Typed(".typing-text", {
-  strings: ["Developer"],
+const typed = new Typed('.typing-text', {
+  strings: ['Developer', 'Java Programmer', 'AI Enthusiast'],
   typeSpeed: 100,
   backSpeed: 60,
-  loop: true,
+  loop: true
 });
 
-// 2. Tab Switching Logic for Resume
-const tabs = document.querySelectorAll(".tab-btn");
-const contents = document.querySelectorAll(".content");
-
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    tabs.forEach((t) => t.classList.remove("active"));
-    contents.forEach((c) => c.classList.remove("active"));
-
-    tab.classList.add("active");
-    document.querySelector(tab.dataset.target).classList.add("active");
-  });
-});
-
-// 3. Dark/Light Mode Toggle
-const themeToggle = document.getElementById("theme-toggle");
+// 2. Dark/Light Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
 themeToggle.onclick = () => {
-  document.body.classList.toggle("light-theme");
-  themeToggle.classList.toggle("fa-sun");
+  document.body.classList.toggle('light-theme');
+  themeToggle.classList.toggle('fa-sun');
 };
 
-// 4. Scroll Reveal Animations
-ScrollReveal({
-  distance: "80px",
-  duration: 2000,
-  delay: 200,
-});
-
-ScrollReveal().reveal(".home-content, .heading", { origin: "top" });
-ScrollReveal().reveal(".service-box, .resume-container, .contact-form", {
-  origin: "bottom",
-});
-
-/* script.js */
+// 3. ScrollReveal Animations
 const sr = ScrollReveal({
-  distance: "80px",
+  distance: '80px',
   duration: 2000,
   delay: 200,
+  reset: false
 });
 
-// Reveal from left
-sr.reveal(".contact-info, .heading", { origin: "left" });
 
-// Reveal from right
-sr.reveal(".contact-form", { origin: "right" });
+// 4. Tab Switching Logic for Resume Section
+const tabButtons = document.querySelectorAll('.tab-btn');
+const contents = document.querySelectorAll('.content');
 
-// Reveal items one by one
-sr.reveal(".info-item", { interval: 200 });
+tabButtons.forEach(button => {
+    button.onclick = () => {
+        // Remove 'active' class from all buttons and content sections
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        contents.forEach(content => content.classList.remove('active'));
 
-sr.reveal(".project-box", { interval: 200, origin: "bottom" });
+        // Add 'active' class to the clicked button
+        button.classList.add('active');
+
+        // Show the target content section
+        const target = button.getAttribute('data-target');
+        document.querySelector(target).classList.add('active');
+    };
+});
+sr.reveal('.home-content', { origin: 'top' });
+sr.reveal('.heading', { origin: 'top' });
+sr.reveal('.project-box', { origin: 'bottom', interval: 200 });
+sr.reveal('.resume-container', { origin: 'left' });
+sr.reveal('.contact-form', { origin: 'right' });
