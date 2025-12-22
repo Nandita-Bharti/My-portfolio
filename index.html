@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark-theme">
+    <header>
+      <a href="#" class="logo">Nandita<span>.</span></a>
+      <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#resume">About</a>
+        <a href="#contact">Contact</a>
+        <i class="fas fa-moon" id="theme-toggle"></i>
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1>Nandita Bharti</h1>
+        <h3>I'm a <span class="typing-text"></span></h3>
+        <p>
+        As a beginner developer , I am enjoying the world of Web development and Data Structures.
+        I have a passion for solving complex problems and optimizing code for better performance.
+        Learning new frameworks and applying algorithms thinking to create seeamless UI/UX and smarter application.
+        </p>
+        <div class="btn-group">
+          <a href="#" class="btn">Download CV</a>
+          <div class="social-icons">
+            <a href="https://github.com/Nanditabharti140"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/nandita-bharti-ab8671380" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+    <h2 class="heading">Latest <span>Projects</span></h2>
+
+    <div class="projects-container">
+        <div class="project-box">
+            <i class='fab fa-amazon'></i>
+            <h3>Amazon Clone</h3>
+            <p>A fully responsive e-commerce UI featuring a product grid and cart logic.</p>
+            <div class="project-layer">
+                <a href="https://nanditabharti140.github.io/javascript-amazon-project/index.html"><i class='fas fa-external-link-alt'></i></a>
+            </div>
+            <span class="dsa-badge">Logic: Array Mapping</span>
+        </div>
+
+        <div class="project-box">
+            <i class='fas fa-list-check'></i>
+            <h3>To-Do List</h3>
+            <p>Task management app with local storage and real-time filtering logic.</p>
+            <div class="project-layer">
+                <a href="#"><i class='fas fa-external-link-alt'></i></a>
+            </div>
+            <span class="dsa-badge">Logic: CRUD Operations</span>
+        </div>
+
+        <div class="project-box">
+            <i class='fas fa-calculator'></i>
+            <h3>Smart Calculator</h3>
+            <p>A sleek calculator with premium glassmorphic UI</p>
+            <div class="project-layer">
+                <a href="https://nanditabharti140.github.io/Smart-Calculator/"><i class='fas fa-external-link-alt'></i></a>
+            </div>
+            <span class="dsa-badge">Logic: String Parsing</span>
+        </div>
+    </div>
+</section>
+
+    <section class="services" id="services">
+      <h2 class="heading">My <span>Services</span></h2>
+      <div class="services-container">
+        <div class="service-box">
+          <div class="box-top">
+            <i class="fas fa-code"></i>
+            <div class="arrow"><i class="fas fa-arrow-down"></i></div>
+          </div>
+          <h3>Web Development</h3>
+          <p>
+            Crafting responsive, fast-loading websites using the latest frontend
+            frameworks and clean coding practices.
+          </p>
+        </div>
+        <div class="service-box">
+          <div class="box-top">
+            <i class="fas fa-paint-brush"></i>
+            <div class="arrow"><i class="fas fa-arrow-down"></i></div>
+          </div>
+          <h3>UI/UX Design</h3>
+          <p>
+            Designing user-centric interfaces that are visually stunning and
+            provide a seamless digital experience.
+          </p>
+        </div>
+        <div class="service-box">
+          <div class="box-top">
+            <i class="fas fa-brain"></i>
+            <div class="arrow"><i class="fas fa-arrow-down"></i></div>
+          </div>
+          <h3>Data Structure and Algorithms</h3>
+          <p>
+            Contributing in solving real world problems and constantly improving
+            my problem solving skills.
+          </p>
+        </div>
+        <div class="service-box">
+          <div class="box-top">
+            <i class="fab fa-github"></i>
+             <div class="arrow"><i class="fas fa-arrow-down"></i></div>
+          </div>
+            <h3>Version Control</h3>
+            <p>
+              Managing source code efficiently using Git and GitHub
+              for version tracking and collaborations
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="resume" id="resume">
+      <div class="resume-container">
+        <div class="resume-left">
+          <h2>Why Hire Me?</h2>
+          <div class="tab-btn-container">
+            <button class="tab-btn active" data-target="#education">
+              Education
+            </button>
+            <button class="tab-btn" data-target="#skills">Skills</button>
+            <button class="tab-btn" data-target="#about">About Me</button>
+          </div>
+        </div>
+
+        <div class="resume-right">
+          <div class="content active" id="education">
+            <h2 class="content-title">My <span>Education</span></h2>
+            <div class="grid-2">
+              <div class="resume-card">
+                <span class="year">2024-2028</span>
+                <h3>B.Tech</h3>
+                <p class="platform">● G.L. Bajaj Institute</p>
+              </div>
+              <div class="resume-card">
+                <span class="year">2024(Jan)</span>
+                <h3>Web Design Bootcamp</h3>
+                <p class="platform">● Online Learning</p>
+              </div>
+              <div class="resume-card">
+                <span class="year">2025(Nov-Dec)</span>
+                <h3>Data Science Internship</h3>
+                <p class="online">● SkillCraft Technology</p>
+              </div> 
+              <div class="resume-card">
+                <span class="year">2025(March)</span>
+                <h3>Gen AI Bootcamp</h3>
+                <p class="Online">● Online Learning</p>
+              </div>
+            </div>
+          </div>
+
+     <div class="content" id="skills">
+        <h2 class="content-title">My <span>Skills</span></h2>
+        <div class="skills-grid-premium">
+            <div class="skill-box">
+             <div class="skill-info">
+                <span>HTML</span>
+                <span>95%</span>
+            </div>
+             <div class="progress-line" data-percent="95%"><span style="width: 95%;"></span></div>
+        </div>
+        <div class="skill-box">
+            <div class="skill-info">
+                <span>CSS</span>
+                <span>90%</span>
+            </div>
+            <div class="progress-line" data-percent="90%"><span style="width: 90%;"></span></div>
+        </div>
+        <div class="skill-box">
+            <div class="skill-info">
+                <span>JavaScript</span>
+                <span>85%</span>
+            </div>
+            <div class="progress-line" data-percent="85%"><span style="width: 85%;"></span></div>
+        </div>
+        <div class="skill-box">
+            <div class="skill-info">
+                <span>Python</span>
+                <span>80%</span>
+            </div>
+            <div class="progress-line" data-percent="80%"><span style="width: 80%;"></span></div>
+        </div>
+        <div class="skill-box">
+            <div class="skill-info">
+                <span>Java</span>
+                <span>75%</span>
+            </div>
+            <div class="progress-line" data-percent="75%"><span style="width: 75%;"></span></div>
+        </div>
+        <div class="skill-box">
+            <div class="skill-info">
+                <span>Gen AI</span>
+                <span>70%</span>
+            </div>
+            <div class="progress-line" data-percent="70%"><span style="width: 70%;"></span></div>
+        </div>
+
+    </div>
+</div>
+         <div class="content" id="about">
+          <h2 class="content-title">About <span>Me</span></h2>
+          <div class="about-grid">
+           <div class="about-card">
+            <div class="card-icon"><i class="fas fa-rocket"></i></div>
+             <h3>Professional Goal</h3>
+             <p>Eager to apply my skills to real-world projects and collaborate with industry      experts to build impactful solutions.</p>
+           </div>
+
+       <div class="about-card">
+         <div class="card-icon"><i class="fas fa-code"></i></div>
+         <h3>Technical Focus</h3>
+          <p>Building a strong foundation in Programming, Web Development, and Data Structures & Algorithms (DSA).</p>
+      </div>
+
+    <div class="about-card">
+        <div class="card-icon"><i class="fas fa-seedling"></i></div>
+        <h3>Growth Mindset</h3>
+        <p>Constantly exploring new tech ecosystems to grow, innovate, and stay ahead in the evolving digital landscape.</p>
+    </div>
+
+      <div class="about-card">
+          <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+          <h3>Availability</h3>
+          <div class="status-badge">Available for Freelance</div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </section>
+
+    <section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me</span></h2> <div class="contact-container">
+        <div class="contact-info">
+            <div class="info-item">
+                <i class='fas fa-envelope'></i>
+                <div class="details">
+                    <span>Email</span>
+                    <p>nanditabharti628@gmail.com</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <i class='fas fa-phone'></i>
+                <div class="details">
+                    <span>Phone</span>
+                    <p>(+91) 8294211014</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fab fa-github"></i>
+              <div class="details">
+                <span>GitHub</span>
+                <p><a href="https://github.com/Nanditabharti140" target="_blank">github.com/Nanditabharti140</a></p>   </div>
+            </div>
+             <div class="info-item">
+              <i class="fab fa-linkedin-in"></i>
+              <div class="details">
+                <span>Linkedln</span>
+                <p><a href="https://www.linkedin.com/in/nandita-bharti-ab8671380" target="_blank">linkedin.com/in/nandita-bharti-ab8671380</a></p>   </div>
+            </div>
+
+        </div>
+
+        <form action="#" class="contact-form">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,568 @@
+:root {
+  --bg-color: #0f172a;
+  --second-bg-color: #1e293b;
+  --text-color: #f8fafc;
+  --main-color: #58d64d;
+  --glow-color: rgba(88, 214, 77, 0.4);
+}
+
+.light-theme {
+  --bg-color: #f1f5f9;
+  --second-bg-color: #ffffff;
+  --text-color: #0f172a;
+  --main-color: #16a34a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: 0.4s ease;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Header & Nav */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.5rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+}
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--text-color);
+}
+.logo span {
+  color: var(--main-color);
+}
+nav a {
+  margin-left: 2rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--text-color);
+}
+nav a.active,
+nav a:hover {
+  color: var(--main-color);
+}
+#theme-toggle {
+  cursor: pointer;
+  margin-left: 2rem;
+  font-size: 1.2rem;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+/* Hero Section */
+.home {
+  display: flex;
+  align-items: center;
+}
+.home-content h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.typing-text {
+  color: var(--main-color);
+  -webkit-text-stroke: 1px var(--main-color);
+  text-shadow: 0 0 10px var(--glow-color);
+  font-weight: 800;
+}
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.btn {
+  padding: 12px 32px;
+  background: var(--main-color);
+  color: #000;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 0 20px var(--glow-color);
+}
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  color: var(--main-color);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.social-icons a:hover {
+  background: var(--main-color);
+  color: #000;
+}
+
+.projects {
+    background: var(--bg-color); /* Matches your home background */
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 in a row like you requested */
+    align-items: center;
+    gap: 2.5rem;
+    padding: 0 7%;
+}
+
+.project-box {
+    background: var(--second-bg-color); /* Matches your skill boxes */
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.5s ease;
+    height: 450px;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02); /* Subtle zoom effect */
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.1);
+}
+
+.project-box i {
+    font-size: 4rem;
+    color: var(--main-color);
+}
+
+.project-box h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.dsa-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    background: rgba(57, 255, 20, 0.1);
+    color: var(--main-color);
+    border-radius: 10px;
+    font-size: 0.8rem;
+    margin-top: 15px;
+}
+
+/* Services */
+.heading {
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 4rem;
+}
+.heading span {
+  color: var(--main-color);
+}
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+.service-box {
+  background: var(--second-bg-color);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  transition: 0.4s;
+  border: 2px solid transparent;
+  max-width: 350px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.box-top i {
+  font-size: 2.5rem;
+}
+.service-box:hover {
+  border-color: var(--main-color);
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+.box-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.service-box h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  margin: 1rem 0;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+.service-box p {
+  color: #cfcfcf;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  text-align: left;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+.arrow {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 1rem;
+}
+
+/* Resume Section */
+.resume-container {
+  display: flex;
+  gap: 5rem;
+}
+.tab-btn {
+  width: 100%;
+  padding: 1.2rem;
+  background: var(--second-bg-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.tab-btn.active {
+  background: var(--main-color);
+  color: #000;
+}
+.content {
+  display: none;
+}
+.content.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.resume-card {
+  background: var(--second-bg-color);
+  padding: 2rem;
+  border-radius: 15px;
+}
+.year {
+  color: var(--main-color);
+  font-weight: 700;
+}
+
+/* --- Premium Skill Grid --- */
+.skills-grid-premium {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.skill-box {
+  background: var(--second-bg-color);
+  padding: 40px 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 180px;
+}
+
+.skill-box:hover {
+  border-color: var(--main-color);
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.skill-info span:last-child {
+  color: var(--main-color);
+}
+
+/* Progress Bar Background */
+.progress-line {
+  height: 10px;
+  width: 100%;
+  background: #333;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Progress Bar */
+.progress-line span {
+  height: 100%;
+  position: absolute;
+  background: var(--main-color);
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--main-color);
+  animation: loadProgress 2s ease-out forwards;
+}
+
+/* Shine Effect Animation */
+.progress-line span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shine 2s infinite;
+}
+
+@keyframes loadProgress {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .skills-grid-premium {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contact Section Premium Styling */
+.contact {
+    padding: 100px 7%;
+    background: var(--bg-color);
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 3rem;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    background: rgba(255, 255, 255, 0.05); /* Soft Glass effect */
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s ease;
+}
+
+.info-item:hover {
+    border-color: var(--main-color);
+    transform: translateX(10px);
+}
+
+.info-item i {
+    font-size: 2.5rem;
+    color: var(--main-color);
+}
+
+.info-item p a{
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.info-item span {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.contact-form {
+    flex: 1.5;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 3rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* Form Inputs */
+.input-box input, .contact-form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background: var(--second-bg-color);
+    border-radius: 10px;
+    margin: 0.8rem 0;
+    border: 1px solid transparent;
+    transition: 0.3s ease;
+}
+
+.input-box {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.input-box input:focus, .contact-form textarea:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
+    outline: none;
+}
+
+/* --- Premium About Section --- */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates a professional 2x2 grid */
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.about-card {
+  background: var(--second-bg-color);
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.about-card:hover {
+  border-color: var(--main-color);
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.card-icon {
+  font-size: 2rem;
+  color: var(--main-color);
+}
+
+.about-card h3 {
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.about-card p {
+  font-size: 0.95rem;
+  color: #cfcfcf;
+  line-height: 1.6;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 171, 255, 0.1); /* Subtle blue tint */
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 50px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: auto;
+}
+
+/*Apply hover effect to education cards*/
+.resume-card {
+  border: 2px solid transparent;
+  transition: 0.4s ease;
+}
+
+.resume-card:hover {
+  border-color: var(--main-color);
+  transform: translateY(-8 px);
+  cursor: pointer;
+}
+.resume-card.active {
+  border-color: var(--main-color);
+  background: rgba(0, 255, 136, 0.05);
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 600px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
